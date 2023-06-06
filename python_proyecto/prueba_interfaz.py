@@ -13,4 +13,6 @@ while True:
     if event == "OK" or event == sg.WIN_CLOSED:
         break
 
+# adding a comment
+
 window.close()
