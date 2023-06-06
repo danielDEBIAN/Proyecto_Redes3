@@ -1,0 +1,48 @@
+Jun 06 20:51:54.648 HYPERVISOR: Release 0.2.23-amd64/Linux (tag 2023010200)
+Jun 06 20:51:54.648 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 43553.
+Jun 06 20:51:54.657 HYPERVISOR: exec_cmd: hypervisor version 
+Jun 06 20:51:54.657 HYPERVISOR: exec_cmd: hypervisor working_dir /home/daniel/Documents/Redes3/Proyecto_Redes3/GNS3_proyecto/proyecto_final/project-files/dynamips 
+Jun 06 20:51:54.657 GENERAL: working_dir=/home/daniel/Documents/Redes3/Proyecto_Redes3/GNS3_proyecto/proyecto_final/project-files/dynamips
+Jun 06 20:51:54.657 HYPERVISOR: exec_cmd: hypervisor working_dir /home/daniel/Documents/Redes3/Proyecto_Redes3/GNS3_proyecto/proyecto_final/project-files/dynamips/f73d73c7-24ab-4806-ac29-65c8510d1d73 
+Jun 06 20:51:54.657 GENERAL: working_dir=/home/daniel/Documents/Redes3/Proyecto_Redes3/GNS3_proyecto/proyecto_final/project-files/dynamips/f73d73c7-24ab-4806-ac29-65c8510d1d73
+Jun 06 20:51:54.657 HYPERVISOR: exec_cmd: vm create R3 3 c7200 
+Jun 06 20:51:54.658 VM: VM R3 created.
+Jun 06 20:51:54.658 HYPERVISOR: exec_cmd: vm set_con_tcp_port R3 5002 
+Jun 06 20:51:54.658 HYPERVISOR: exec_cmd: c7200 get_mac_addr R3 
+Jun 06 20:51:54.658 HYPERVISOR: exec_cmd: vm get_status R3 
+Jun 06 20:51:54.658 HYPERVISOR: exec_cmd: vm slot_add_binding R3 0 0 C7200-IO-FE 
+Jun 06 20:51:54.659 HYPERVISOR: exec_cmd: vm set_ios R3 /home/daniel/GNS3/images/IOS/c7200-a3jk9s-mz.124-25g.image 
+Jun 06 20:51:54.659 HYPERVISOR: exec_cmd: vm get_status R3 
+Jun 06 20:51:54.659 HYPERVISOR: exec_cmd: vm set_idle_pc R3 0x60794fcc 
+Jun 06 20:51:54.659 HYPERVISOR: exec_cmd: vm set_ram R3 512 
+Jun 06 20:51:54.659 HYPERVISOR: exec_cmd: vm set_nvram R3 512 
+Jun 06 20:51:54.659 HYPERVISOR: exec_cmd: vm set_disk0 R3 0 
+Jun 06 20:51:54.717 HYPERVISOR: exec_cmd: vm set_ios R3 /home/daniel/GNS3/images/IOS/c7200-a3jk9s-mz.124-25g.image 
+Jun 06 20:51:55.769 HYPERVISOR: exec_cmd: vm set_ios R3 /home/daniel/GNS3/images/IOS/c7200-a3jk9s-mz.124-25g.image 
+Jun 06 20:54:52.969 HYPERVISOR: exec_cmd: vm get_status R3 
+Jun 06 20:54:52.969 HYPERVISOR: exec_cmd: vm slot_add_binding R3 1 0 PA-FE-TX 
+Jun 06 20:54:52.970 HYPERVISOR: exec_cmd: vm get_status R3 
+Jun 06 20:54:52.970 HYPERVISOR: exec_cmd: vm slot_add_binding R3 2 0 PA-FE-TX 
+Jun 06 20:54:52.970 HYPERVISOR: exec_cmd: vm get_status R3 
+Jun 06 20:54:52.970 HYPERVISOR: exec_cmd: vm slot_add_binding R3 3 0 PA-FE-TX 
+Jun 06 20:54:52.970 HYPERVISOR: exec_cmd: vm get_status R3 
+Jun 06 20:54:52.970 HYPERVISOR: exec_cmd: vm slot_add_binding R3 4 0 PA-FE-TX 
+Jun 06 20:55:33.199 HYPERVISOR: exec_cmd: nio create_udp udp-6ff3b2e4-b15b-4a1b-92d5-2a19dcdc3ea2 10010 127.0.0.1 10011 
+Jun 06 20:55:33.405 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R3 0 0 udp-6ff3b2e4-b15b-4a1b-92d5-2a19dcdc3ea2 
+Jun 06 20:55:33.405 HYPERVISOR: exec_cmd: vm get_status R3 
+Jun 06 20:55:36.038 HYPERVISOR: exec_cmd: nio create_udp udp-cac11ee6-8880-460f-9402-f510f152f4a6 10014 127.0.0.1 10015 
+Jun 06 20:55:36.039 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R3 1 0 udp-cac11ee6-8880-460f-9402-f510f152f4a6 
+Jun 06 20:55:36.040 HYPERVISOR: exec_cmd: vm get_status R3 
+Jun 06 20:55:52.493 HYPERVISOR: exec_cmd: vm set_ios R3 /home/daniel/GNS3/images/IOS/c7200-a3jk9s-mz.124-25g.image 
+Jun 06 20:56:36.650 HYPERVISOR: exec_cmd: nio create_udp udp-890e9807-4dbd-46a4-b6f8-445bcc8ccb6d 10068 127.0.0.1 10069 
+Jun 06 20:56:36.651 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R3 2 0 udp-890e9807-4dbd-46a4-b6f8-445bcc8ccb6d 
+Jun 06 20:56:36.651 HYPERVISOR: exec_cmd: vm get_status R3 
+Jun 06 20:56:41.237 HYPERVISOR: exec_cmd: nio create_udp udp-bbcb300c-0cbe-4e23-9902-6d592c27897d 10072 127.0.0.1 10073 
+Jun 06 20:56:41.238 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R3 3 0 udp-bbcb300c-0cbe-4e23-9902-6d592c27897d 
+Jun 06 20:56:41.239 HYPERVISOR: exec_cmd: vm get_status R3 
+Jun 06 20:56:44.831 HYPERVISOR: exec_cmd: nio create_udp udp-9e2cab05-7ba2-41eb-8d26-0bc7a4f037c1 10076 127.0.0.1 10077 
+Jun 06 20:56:44.831 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R3 4 0 udp-9e2cab05-7ba2-41eb-8d26-0bc7a4f037c1 
+Jun 06 20:56:44.832 HYPERVISOR: exec_cmd: vm get_status R3 
+Jun 06 20:56:49.186 HYPERVISOR: exec_cmd: vm set_ios R3 /home/daniel/GNS3/images/IOS/c7200-a3jk9s-mz.124-25g.image 
+Jun 06 20:57:30.864 HYPERVISOR: exec_cmd: vm set_ios R3 /home/daniel/GNS3/images/IOS/c7200-a3jk9s-mz.124-25g.image 
+Jun 06 20:58:19.563 HYPERVISOR: exec_cmd: vm set_ios R3 /home/daniel/GNS3/images/IOS/c7200-a3jk9s-mz.124-25g.image 
