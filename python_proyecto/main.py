@@ -1,18 +1,5 @@
 # Importamos librerias
 import PySimpleGUI as sg
-import sys
-
-# Creamos una clase para obtener el output de la terminal
-class OutputRedirector:
-    def __init__(self, output_elem):
-        self.output_elem = output_elem
-
-    def write(self, message):
-        # Modificamos el elemento output de la interfaz
-        self.output_elem.update(value=message)
-
-    def flush(self):
-        pass
 
 # Funcion para ventana de mostrar configuracion
 def configuration():
@@ -23,27 +10,19 @@ def configuration():
     layout_configuration = [
         [sg.Text('Mostrar configuracion', justification='center')],
         [sg.Output(size=(80,20), key='-OUTPUT-')],
-        [sg.Button('Imprimir'), sg.Button('Regresar')]
+        [sg.Button('Regresar')]
     ]
 
     # Creamos la ventana
     window_configuration = sg.Window('Configuracion', layout_configuration)
 
-    # Mandamos el output a la terminal
-    output_redirector = OutputRedirector(window_configuration['-OUTPUT-'])
-    sys.stdout = output_redirector
-
     # Generamos el loop para que se procesen los eventos y se obtengan valores
     while True:
         event, values = window_configuration.read()
-        if event == 'Imprimir':
-            print('Hola a todos')
         if event == 'Regresar' or event == sg.WIN_CLOSED: # Definimos si se cierra la ventana se termina el evento o si se selecciona salir
             window_configuration.close()
             main()
             break
-    # Restauramos el output
-    sys.stdout = sys.__stdout__
 
     window_configuration.close()
 
