@@ -22,8 +22,170 @@
                 "locked": false,
                 "rotation": 0,
                 "svg": "<svg width=\"199\" height=\"127\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">PROYECTO FINAL\n\nIntegrantes:\n- Espinoza Bautista Daniel\n- Loredo Cortes Luis Josue\n\nGrupo: 4CM15</text></svg>",
-                "x": 166,
+                "x": 167,
                 "y": 16,
+                "z": 2
+            },
+            {
+                "drawing_id": "2b1f1f87-2414-43c1-9742-f9e59e4a4199",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg width=\"107\" height=\"26\"><text font-family=\"Noto Sans\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">192.168.10.0 /24</text></svg>",
+                "x": -587,
+                "y": -388,
+                "z": 2
+            },
+            {
+                "drawing_id": "d129d9d2-a9e5-4e4a-8a49-01190042b38d",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg width=\"107\" height=\"26\"><text font-family=\"Noto Sans\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">192.168.11.0 /24</text></svg>",
+                "x": -464,
+                "y": -389,
+                "z": 2
+            },
+            {
+                "drawing_id": "5e16a6c0-c2ec-4006-94c9-2a49982cdeab",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg width=\"107\" height=\"26\"><text font-family=\"Noto Sans\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">192.168.12.0 /24</text></svg>",
+                "x": -336,
+                "y": -388,
+                "z": 2
+            },
+            {
+                "drawing_id": "b0cfe900-3eec-4a02-96b0-8d9f5df2d321",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg width=\"95\" height=\"25\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">10.1.1.0 /30</text></svg>",
+                "x": -252,
+                "y": -167,
+                "z": 2
+            },
+            {
+                "drawing_id": "0706f3c0-4edb-44cd-ac84-9687eeb3ea06",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg width=\"95\" height=\"25\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">10.1.2.0 /30</text></svg>",
+                "x": -532,
+                "y": -46,
+                "z": 2
+            },
+            {
+                "drawing_id": "558072ee-58fc-447e-a10c-2e49a04ffc0e",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg width=\"95\" height=\"25\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">10.1.3.0 /30</text></svg>",
+                "x": -270,
+                "y": 58,
+                "z": 2
+            },
+            {
+                "drawing_id": "b69cc399-034e-4608-8839-be03bb6879a5",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg width=\"95\" height=\"25\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">10.1.4.0 /30</text></svg>",
+                "x": 10,
+                "y": -33,
+                "z": 2
+            },
+            {
+                "drawing_id": "88de3085-bc61-46dd-a64a-d97d7971a233",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg width=\"95\" height=\"25\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">10.1.5.0 /30</text></svg>",
+                "x": 119,
+                "y": -119,
+                "z": 2
+            },
+            {
+                "drawing_id": "a406359f-efbd-4d1a-9291-e7803d9d396d",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg width=\"107\" height=\"26\"><text font-family=\"Noto Sans\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">192.169.10.0 /24</text></svg>",
+                "x": -159,
+                "y": -382,
+                "z": 2
+            },
+            {
+                "drawing_id": "0dc7233c-51bf-4b2d-9f57-e2d433e6dc8b",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg width=\"107\" height=\"26\"><text font-family=\"Noto Sans\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">192.169.11.0 /24</text></svg>",
+                "x": -43,
+                "y": -384,
+                "z": 2
+            },
+            {
+                "drawing_id": "0bd3c636-5868-4645-a0a4-ebb2fcc8b0e2",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg width=\"107\" height=\"26\"><text font-family=\"Noto Sans\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">192.169.12.0 /24</text></svg>",
+                "x": 77,
+                "y": -380,
+                "z": 2
+            },
+            {
+                "drawing_id": "e0c21275-f283-42c6-a24f-0e48dd1cc34e",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg width=\"107\" height=\"26\"><text font-family=\"Noto Sans\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">192.170.10.0 /24</text></svg>",
+                "x": -596,
+                "y": 305,
+                "z": 2
+            },
+            {
+                "drawing_id": "bf0619e5-1da4-4e26-95d5-a5cc23092dce",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg width=\"107\" height=\"26\"><text font-family=\"Noto Sans\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">192.170.11.0 /24</text></svg>",
+                "x": -477,
+                "y": 305,
+                "z": 2
+            },
+            {
+                "drawing_id": "c5c22afa-9a50-4ce3-92d9-c8e3ea886589",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg width=\"107\" height=\"26\"><text font-family=\"Noto Sans\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">192.170.12.0 /24</text></svg>",
+                "x": -358,
+                "y": 307,
+                "z": 2
+            },
+            {
+                "drawing_id": "7e9f4945-0512-4977-8a6a-883a561f0d3b",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg width=\"107\" height=\"26\"><text font-family=\"Noto Sans\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">192.171.10.0 /24</text></svg>",
+                "x": -176,
+                "y": 325,
+                "z": 2
+            },
+            {
+                "drawing_id": "9d0ee56b-39ca-4f19-90d6-b028b7947c6e",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg width=\"107\" height=\"26\"><text font-family=\"Noto Sans\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">192.171.11.0 /24</text></svg>",
+                "x": -54,
+                "y": 325,
+                "z": 2
+            },
+            {
+                "drawing_id": "0b6cc5e1-420c-4ad8-96c1-c98fa919adec",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg width=\"107\" height=\"26\"><text font-family=\"Noto Sans\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">192.171.12.0 /24</text></svg>",
+                "x": 66,
+                "y": 325,
+                "z": 2
+            },
+            {
+                "drawing_id": "631f3b90-8829-42a4-ae26-d3c38676546b",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg width=\"131\" height=\"25\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">192.172.10.0 /24</text></svg>",
+                "x": 394,
+                "y": -117,
                 "z": 2
             }
         ],
@@ -574,7 +736,7 @@
             },
             {
                 "filters": {},
-                "link_id": "07675c70-75f2-4c19-b643-966064a53248",
+                "link_id": "f63d6dc8-7f38-45ba-a825-0e7826cd0a43",
                 "link_style": {},
                 "nodes": [
                     {
@@ -584,7 +746,7 @@
                             "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
                             "text": "f1/0",
                             "x": 72,
-                            "y": 21
+                            "y": 23
                         },
                         "node_id": "cd422a7f-17ed-47b1-b08f-f456265f292a",
                         "port_number": 0
@@ -596,9 +758,9 @@
                             "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
                             "text": "e0",
                             "x": -7,
-                            "y": 30
+                            "y": 27
                         },
-                        "node_id": "063ca207-99f6-4884-8c94-8a7abf2f8440",
+                        "node_id": "90e98729-85c8-4e12-b488-f75bb4a6815e",
                         "port_number": 0
                     }
                 ],
@@ -618,8 +780,8 @@
                     "rotation": 0,
                     "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
                     "text": "R1",
-                    "x": -8,
-                    "y": 32
+                    "x": 17,
+                    "y": 21
                 },
                 "locked": false,
                 "name": "R1",
@@ -687,8 +849,8 @@
                     "rotation": 0,
                     "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
                     "text": "R2",
-                    "x": 4,
-                    "y": 37
+                    "x": 18,
+                    "y": 20
                 },
                 "locked": false,
                 "name": "R2",
@@ -756,8 +918,8 @@
                     "rotation": 0,
                     "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
                     "text": "R3",
-                    "x": -17,
-                    "y": -15
+                    "x": 17,
+                    "y": 18
                 },
                 "locked": false,
                 "name": "R3",
@@ -825,8 +987,8 @@
                     "rotation": 0,
                     "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
                     "text": "R4",
-                    "x": -1,
-                    "y": -23
+                    "x": 17,
+                    "y": 20
                 },
                 "locked": false,
                 "name": "R4",
@@ -1295,8 +1457,8 @@
                 "symbol": ":/symbols/router.svg",
                 "template_id": "5bee99a3-379d-4ffc-b30a-bc8806f237e1",
                 "width": 66,
-                "x": 246,
-                "y": -156,
+                "x": 277,
+                "y": -153,
                 "z": 1
             },
             {
@@ -1310,13 +1472,13 @@
                 "label": {
                     "rotation": 0,
                     "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
-                    "text": "archcraft-1",
-                    "x": -12,
+                    "text": "Xubuntu-1",
+                    "x": -9,
                     "y": -25
                 },
                 "locked": false,
-                "name": "archcraft-1",
-                "node_id": "063ca207-99f6-4884-8c94-8a7abf2f8440",
+                "name": "Xubuntu-1",
+                "node_id": "90e98729-85c8-4e12-b488-f75bb4a6815e",
                 "node_type": "virtualbox",
                 "port_name_format": "Ethernet{0}",
                 "port_segment_size": 0,
@@ -1326,16 +1488,16 @@
                     "headless": false,
                     "linked_clone": false,
                     "on_close": "power_off",
-                    "ram": 8467,
+                    "ram": 8192,
                     "usage": "",
                     "use_any_adapter": true,
-                    "vmname": "archcraft"
+                    "vmname": "Xubuntu"
                 },
                 "symbol": ":/symbols/vbox_guest.svg",
-                "template_id": "07a2f8c3-4d9e-47ae-b3a7-18e0ae0ad1c0",
+                "template_id": "b238cc7b-4b58-4c8c-9f82-2285e6e75f3d",
                 "width": 65,
-                "x": 461,
-                "y": -166,
+                "x": 553,
+                "y": -161,
                 "z": 1
             }
         ]
