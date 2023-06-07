@@ -2,9 +2,9 @@
 > Este proyecto se realizo con la finalidad de recopilar los conocimientos obtenidos durante el curso
 
 ## Documentacion de SimpleGUI
-Como instalar:
+1. Como instalar:
 * https://www.pysimplegui.org/en/latest/
-GitHub del proyecto:
+2. GitHub del proyecto:
 * https://github.com/PySimpleGUI/PySimpleGUI
 
 ## Tutorial de SimpleGUI
