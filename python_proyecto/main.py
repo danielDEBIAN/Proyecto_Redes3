@@ -1,5 +1,7 @@
 # Importamos librerias
 import PySimpleGUI as sg
+import paramiko
+import time
 
 # Funcion para ventana de mostrar configuracion
 def configuration():
@@ -8,23 +10,52 @@ def configuration():
 
     # Definimos el layout de la ventana
     layout_configuration = [
-        [sg.Text('Mostrar configuracion', justification='center')],
-        [sg.Output(size=(80,20), key='-OUTPUT-')],
-        [sg.Button('Regresar')]
+        [sg.Text('Mostrar configuracion', font=('Arial', 18))],
+        [sg.Text('IP del router', font=('Arial', 15))],
+        [sg.Input(key='-INPUT-IP-')],
+        [sg.Text('Usuario', font=('Arial', 15))],
+        [sg.Input(key='-INPUT-USER-')],
+        [sg.Text('Password', font=('Arial', 15))],
+        [sg.Input(key='-INPUT-PASS-')],
+        [sg.Button('Conectarse', font=('Arial', 12))],
+        [sg.Output(size=(80,20), font=('Arial', 12))],
+        [sg.Button('Regresar', font=('Arial', 10))]
     ]
 
     # Creamos la ventana
-    window_configuration = sg.Window('Configuracion', layout_configuration)
+    window_configuration = sg.Window('Configuracion', layout_configuration, element_justification='center')
 
     # Generamos el loop para que se procesen los eventos y se obtengan valores
     while True:
         event, values = window_configuration.read()
+        if event == 'Conectarse':
+            print('Conectando .')
+            print('Conectando ..')
+            print('Conectando ...')
+            ssh_client = paramiko.SSHClient()
+            output = get_configuration(ssh_client , values['-INPUT-IP-'], values['-INPUT-USER-'], values['-INPUT-PASS-'])
+            print(output)
+            ssh_client.close()
         if event == 'Regresar' or event == sg.WIN_CLOSED: # Definimos si se cierra la ventana se termina el evento o si se selecciona salir
             window_configuration.close()
             main()
             break
 
     window_configuration.close()
+
+def get_configuration(ssh_client, ip, user, password):
+    ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    ssh_client.connect(hostname=ip, port='22', username=user, password=password)
+    shell = ssh_client.invoke_shell()
+    time.sleep(1)
+    shell.send('enable\n')
+    time.sleep(1)
+    shell.send('enable_password\n')
+    time.sleep(1)
+    shell.send('show running-config\n')
+    time.sleep(5) 
+    output = shell.recv(65535).decode('utf-8')
+    return output
 
 # Funcion para ventana de mostrar enrutamiento
 def routing():
@@ -113,15 +144,15 @@ def main():
 
     # Definimos el layout de la ventana
     layout_main = [
-        [sg.Text('Configuracion de Routers', justification='center')],
-        [sg.Text('¿Que deseas hacer?', justification='center')],
-        [sg.Button('Mostrar configuracion'), sg.Button('Mostrar enrutamiento')],
-        [sg.Button('Conectarse a routers'), sg.Button('Varios')],
-        [sg.Button('Salir')]
+        [sg.Text('Configuracion de Routers', justification='center', font=('Arial', 18))],
+        [sg.Text('¿Que deseas hacer?', justification='center', font=('Arial', 15))],
+        [sg.Button('Mostrar configuracion', font=('Arial', 12)), sg.Button('Mostrar enrutamiento', font=('Arial', 12))],
+        [sg.Button('Conectarse a routers', font=('Arial', 12)), sg.Button('Varios', font=('Arial', 12))],
+        [sg.Button('Salir', font=('Arial', 10))]
     ]
 
     # Creamos la ventana
-    window_main = sg.Window('Proyecto Final', layout_main)
+    window_main = sg.Window('Proyecto Final', layout_main, element_justification='center')
 
     # Definimos el bucle para que permanezca abierta la ventaan
     while True:
