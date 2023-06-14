@@ -34,3 +34,9 @@ ENLACE ENTONCES QUE EN LA CONSOLA O INTERFAZ GRAFICA SE MUESTRE LA CAIDA DEL ENL
 
 ## Enlace de la presentacion de codigos de Python del profe
 https://correoipn.sharepoint.com/:p:/r/sites/ASR4CM15232/_layouts/15/Doc.aspx?action=edit&sourcedoc=%7Ba139ab32-a9f9-456c-a25c-5dd8ea85aa35%7D&wdOrigin=TEAMS-WEB.teamsSdk.openFilePreview&wdExp=TEAMS-CONTROL&web=1
+
+## IP para PC
+La IP para la maquina virtual debe ser:
+```bash
+192.172.10.2
+```

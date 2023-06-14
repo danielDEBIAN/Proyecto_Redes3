@@ -733,38 +733,6 @@
                     }
                 ],
                 "suspend": false
-            },
-            {
-                "filters": {},
-                "link_id": "f63d6dc8-7f38-45ba-a825-0e7826cd0a43",
-                "link_style": {},
-                "nodes": [
-                    {
-                        "adapter_number": 1,
-                        "label": {
-                            "rotation": 0,
-                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
-                            "text": "f1/0",
-                            "x": 72,
-                            "y": 23
-                        },
-                        "node_id": "cd422a7f-17ed-47b1-b08f-f456265f292a",
-                        "port_number": 0
-                    },
-                    {
-                        "adapter_number": 0,
-                        "label": {
-                            "rotation": 0,
-                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
-                            "text": "e0",
-                            "x": -7,
-                            "y": 27
-                        },
-                        "node_id": "90e98729-85c8-4e12-b488-f75bb4a6815e",
-                        "port_number": 0
-                    }
-                ],
-                "suspend": false
             }
         ],
         "nodes": [
@@ -1460,50 +1428,11 @@
                 "x": 277,
                 "y": -153,
                 "z": 1
-            },
-            {
-                "compute_id": "local",
-                "console": null,
-                "console_auto_start": false,
-                "console_type": "none",
-                "custom_adapters": [],
-                "first_port_name": "",
-                "height": 59,
-                "label": {
-                    "rotation": 0,
-                    "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
-                    "text": "Xubuntu-1",
-                    "x": -9,
-                    "y": -25
-                },
-                "locked": false,
-                "name": "Xubuntu-1",
-                "node_id": "90e98729-85c8-4e12-b488-f75bb4a6815e",
-                "node_type": "virtualbox",
-                "port_name_format": "Ethernet{0}",
-                "port_segment_size": 0,
-                "properties": {
-                    "adapter_type": "Intel PRO/1000 MT Desktop (82540EM)",
-                    "adapters": 1,
-                    "headless": false,
-                    "linked_clone": false,
-                    "on_close": "power_off",
-                    "ram": 8192,
-                    "usage": "",
-                    "use_any_adapter": true,
-                    "vmname": "Xubuntu"
-                },
-                "symbol": ":/symbols/vbox_guest.svg",
-                "template_id": "b238cc7b-4b58-4c8c-9f82-2285e6e75f3d",
-                "width": 65,
-                "x": 553,
-                "y": -161,
-                "z": 1
             }
         ]
     },
     "type": "topology",
     "variables": null,
-    "version": "2.2.40",
+    "version": "2.2.40.1",
     "zoom": 100
 }
