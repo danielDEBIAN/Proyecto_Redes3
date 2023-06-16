@@ -23,7 +23,7 @@ https://www.tutorialspoint.com/how-to-install-tkinter-in-python
 
 ### Requerimentos:
 Mediante un programa de Python ​que corra en mi maquina Virtual  en GNS3​
-Deberá de mostrarme:​
+- Deberá de mostrarme:​
 1. La configuración de toda mi red(cada router) incluyendo las vpc​
 2. Protocolos de enrutamiento configurados en cada router.​
 3. Tener conectividad con ssh y telnet (conectarme a cualquier router solo con correr el prohrama)​

@@ -48,7 +48,7 @@ def show_connection_ip(usuario, password):
         [sg.Text('IP del router', font=('Consolas', 13))],
         [sg.Input(key='-INPUT-IP-', font=('Consolas', 10))],
         [sg.Text('¿Que configuracion deseas ver?', font=('Consolas', 13))],
-        [sg.DropDown(["Resumen","Interfaces", "Ruteo", "ACL", "DHCP", "NAT", "DNS"], key='-DROPDOWN-', font=('Consolas', 10))],
+        [sg.DropDown(["Interfaces", "Ruteo", "ACL", "DHCP", "NAT", "DNS"], key='-DROPDOWN-', font=('Consolas', 10))],
         [sg.Text("", size=(1, 1))],
         [sg.Button('Conectarse', font=('Consolas', 10))],
         [sg.Output(size=(80,10), font=('Consolas', 10), key="-OUTPUT-")],
@@ -64,15 +64,7 @@ def show_connection_ip(usuario, password):
         if event == 'Conectarse':
             if values['-INPUT-IP-'] == "":
                 sg.popup('Error', 'Digite una IP')
-            if values['-DROPDOWN-'] == "Resumen":
-                try:
-                    window_configuration['-OUTPUT-'].update("")
-                    print('Conectando ...')
-                    output = get_configuration(values['-INPUT-IP-'], usuario, password)
-                    print(output)
-                except Exception as e:
-                    print('Error:', str(e))
-            elif values['-DROPDOWN-'] == "Interfaces":
+            if values['-DROPDOWN-'] == "Interfaces":
                 try:
                     window_configuration['-OUTPUT-'].update("")
                     print('Conectando ...')
@@ -122,6 +114,22 @@ def show_connection_router(usuario, password):
                 window_configuration.close()
                 connection_router('10.1.1.1', usuario, password)
                 break
+            if values['-DROPDOWN-'] == "R2":
+                window_configuration.close()
+                connection_router('10.1.4.1', usuario, password)
+                break
+            if values['-DROPDOWN-'] == "R3":
+                window_configuration.close()
+                connection_router('10.1.3.1', usuario, password)
+                break
+            if values['-DROPDOWN-'] == "R4":
+                window_configuration.close()
+                connection_router('10.1.3.2', usuario, password)
+                break
+            if values['-DROPDOWN-'] == "R5":
+                window_configuration.close()
+                connection_router('192.172.10.1', usuario, password)
+                break
             elif values['-DROPDOWN-'] == "":
                 sg.popup('Error', 'Seleccione una opcion')
 
@@ -139,7 +147,7 @@ def connection_router(ip, usuario, password):
     # Definimos el layout de la ventana
     layout_configuration = [
         [sg.Text('¿Que configuracion deseas ver?', font=('Consolas', 13))],
-        [sg.DropDown(["Resumen","Interfaces", "Ruteo", "ACL", "DHCP", "NAT", "DNS"], key='-DROPDOWN-', font=('Consolas', 10))],
+        [sg.DropDown(["Interfaces", "Ruteo", "ACL", "DHCP", "NAT", "DNS"], key='-DROPDOWN-', font=('Consolas', 10))],
         [sg.Text("", size=(1, 1))],
         [sg.Button('Mostrar', font=('Consolas', 10))],
         [sg.Output(size=(80,10), font=('Consolas', 10), key="-OUTPUT-")],
@@ -152,16 +160,8 @@ def connection_router(ip, usuario, password):
     # Generamos el loop para que se procesen los eventos y se obtengan valores
     while True:
         event, values = window_configuration.read()
-        if event == 'Conectarse':
-            if values['-DROPDOWN-'] == "Resumen":
-                try:
-                    window_configuration['-OUTPUT-'].update("")
-                    print('Conectando ...')
-                    output = get_configuration(ip, usuario, password)
-                    print(output)
-                except Exception as e:
-                    print('Error: ', str(e))
-            elif values['-DROPDOWN-'] == "Interfaces":
+        if event == 'Mostrar':
+            if values['-DROPDOWN-'] == "Interfaces":
                 try:
                     window_configuration['-OUTPUT-'].update("")
                     print('Conectando ...')
@@ -219,28 +219,6 @@ def connection_router(ip, usuario, password):
 
     window_configuration.close()
 
-# Funcion para obtener el resumen de la configuracion
-def get_configuration(ip, user, password):
-    try:
-        # Realizamos la configuracion de SSH
-        ssh_client = paramiko.SSHClient()
-        ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-        ssh_client.connect(hostname=ip, port='22', username=user, password=password)
-
-        # Mandamos los comandos que queremos
-        shell = ssh_client.invoke_shell()
-        time.sleep(1)
-        shell.send('enable\n')
-        time.sleep(1)
-        shell.send('enable_password\n')
-        time.sleep(1)
-        shell.send('show running-config brief\n')
-        time.sleep(5) 
-        output = shell.recv(65535).decode('ascii')
-        return "Conexion exitosa!\n"+output
-    except Exception as e:
-        return "Error en la conexion:\n"+str(e)
-
 # Funcion para obtener la informacion de ruteo
 def get_route(ip, user, password):
     try:
@@ -251,10 +229,6 @@ def get_route(ip, user, password):
 
         # Mandamos los comandos que queremos
         shell = ssh_client.invoke_shell()
-        time.sleep(1)
-        shell.send('enable\n')
-        time.sleep(1)
-        shell.send('enable_password\n')
         time.sleep(1)
         shell.send('show ip route\n')
         time.sleep(5) 
@@ -274,10 +248,6 @@ def get_interfaces(ip, user, password):
         # Mandamos los comandos que queremos
         shell = ssh_client.invoke_shell()
         time.sleep(1)
-        shell.send('enable\n')
-        time.sleep(1)
-        shell.send('enable_password\n')
-        time.sleep(1)
         shell.send('show ip interface brief\n')
         time.sleep(5) 
         output = shell.recv(65535).decode('ascii')
@@ -295,10 +265,6 @@ def get_lists(ip, user, password):
 
         # Mandamos los comandos que queremos
         shell = ssh_client.invoke_shell()
-        time.sleep(1)
-        shell.send('enable\n')
-        time.sleep(1)
-        shell.send('enable_password\n')
         time.sleep(1)
         shell.send('show access-lists\n')
         time.sleep(5) 
@@ -318,11 +284,11 @@ def get_dhcp(ip, user, password):
         # Mandamos los comandos que queremos
         shell = ssh_client.invoke_shell()
         time.sleep(1)
-        shell.send('enable\n')
-        time.sleep(1)
-        shell.send('enable_password\n')
-        time.sleep(1)
         shell.send('show running-config | include dhcp pool\n')
+        time.sleep(1)
+        shell.send('show ip dhcp binding\n')
+        time.sleep(1)
+        shell.send('show ip dhcp server statistics\n')
         time.sleep(5) 
         output = shell.recv(65535).decode('ascii')
         return "Conexion exitosa!\n"+output
@@ -339,10 +305,6 @@ def get_nat(ip, user, password):
 
         # Mandamos los comandos que queremos
         shell = ssh_client.invoke_shell()
-        time.sleep(1)
-        shell.send('enable\n')
-        time.sleep(1)
-        shell.send('enable_password\n')
         time.sleep(1)
         shell.send('show running-config | include nat\n')
         time.sleep(1)
@@ -364,13 +326,31 @@ def get_dns(ip, user, password):
         # Mandamos los comandos que queremos
         shell = ssh_client.invoke_shell()
         time.sleep(1)
-        shell.send('enable\n')
-        time.sleep(1)
-        shell.send('enable_password\n')
-        time.sleep(1)
         shell.send('show running-config | include dns\n')
         time.sleep(1)
-        shell.send('show dns statistics\n')
+        shell.send('show run | section name-server\n')
+        time.sleep(5) 
+        output = shell.recv(65535).decode('ascii')
+        return "Conexion exitosa!\n"+output
+    except Exception as e:
+        return "Error en la conexion:\n"+str(e)
+
+# Funcion para obtener la informacion de VPN
+def get_vpn(ip, user, password):
+    try:
+        # Realizamos la configuracion de SSH
+        ssh_client = paramiko.SSHClient()
+        ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+        ssh_client.connect(hostname=ip, port='22', username=user, password=password)
+
+        # Mandamos los comandos que queremos
+        shell = ssh_client.invoke_shell()
+        time.sleep(1)
+        shell.send('show interfaces tunnel 0\n')
+        time.sleep(1)
+        shell.send('show crypto session\n')
+        time.sleep(1)
+        shell.send('show crypto isakmp policy\n')
         time.sleep(5) 
         output = shell.recv(65535).decode('ascii')
         return "Conexion exitosa!\n"+output
