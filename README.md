@@ -2,7 +2,7 @@
 > Este proyecto se realizo con la finalidad de recopilar los conocimientos obtenidos durante el curso
 
 ## Manual de usuario
-En este [link](https://correoipn-my.sharepoint.com/:w:/g/personal/despinozab1500_alumno_ipn_mx/EZjksQvHe4BKkT52Snzvm5QBKZSaquavKY7AaTIL98mIEA?e=8eE2pU) se encuentra el manual de usuario para el manejo de la interfaz.
+En este [link](https://www.canva.com/design/DAFl9vMW5Ks/NQHNk-S5XwnD9eCMwqbuEQ/edit?utm_content=DAFl9vMW5Ks&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) se encuentra el manual de usuario para el manejo de la interfaz.
 
 ## Documentacion y requerimientos
 ### Documentacion de SimpleGUI

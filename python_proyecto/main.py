@@ -31,7 +31,7 @@ def session(usuario, password):
             break
         if event == 'Conectarse por Router':
             window_session.close()
-            connection_router(usuario, password)
+            show_connection_router(usuario, password)
             break
         if event == 'Cerrar Sesion' or event == sg.WIN_CLOSED: # Definimos si se cierra la ventana se termina el evento o si se selecciona salir
             window_session.close()
@@ -67,9 +67,7 @@ def show_connection_ip(usuario, password):
             if values['-INPUT-IP-'] == "":
                 sg.popup('Error', 'Digite una IP')
             elif values['-DROPDOWN-'] == '':
-                sg.popup('Error', 'Seleccione una opcion')
-            elif values['-INPUT-IP-'] == "" and values['-DROPDOWN-'] == '':
-                sg.popup('Error', 'Digite una IP y seleccione una configuracion')
+                sg.popup('Error', 'Seleccione una opcion de configuracion')
             elif ip_valid(values['-INPUT-IP-']) == False:
                 sg.popup('Error', 'IP no valida, digite una nueva')
             else: # Obtencion de la informacion
@@ -94,7 +92,7 @@ def ip_valid(ip_str):
         return False
 
 # Ventana para conectarse por router
-def connection_router(ip, usuario, password):
+def show_connection_router(usuario, password):
     # Definimos el tema de la ventana
     sg.theme('DarkTeal6')
 
@@ -118,13 +116,11 @@ def connection_router(ip, usuario, password):
         event, values = window_configuration.read()
         if event == 'Mostrar':
             # Comprobacion de que se selecciono algo
-            if values['-DROPDOWN-C-'] == "":
-                sg.popup('Error', 'Seleccione una configuracion')
-            elif values['-DROPDOWN-R-'] == "" and values['-DROPDOWN-C-'] == "":
-                sg.popup('Error', 'Seleccione un router y una configuracion')
-            
-            # Obtencion de la informacion
-            if values['-DROPDOWN-R-'] == "R1":
+            if values['-DROPDOWN-R-'] == "":
+                sg.popup('Error', 'Seleccione un router')
+            elif values['-DROPDOWN-C-'] == "":
+                sg.popup('Error', 'Seleccione una opcion de configuracion')
+            elif values['-DROPDOWN-R-'] == "R1": # Iniciamos con la obtencion de la configuracion
                 window_configuration['-OUTPUT-'].update("")
                 print('Conectando ...')
                 output = get_configuration('10.1.1.1', usuario, password, values['-DROPDOWN-C-'])
@@ -134,23 +130,21 @@ def connection_router(ip, usuario, password):
                 print('Conectando ...')
                 output = get_configuration('10.1.4.1', usuario, password, values['-DROPDOWN-C-'])
                 print(output)
-            elif values['-DROPDOWN-'] == "R3":
+            elif values['-DROPDOWN-R-'] == "R3":
                 window_configuration['-OUTPUT-'].update("")
                 print('Conectando ...')
                 output = get_configuration('10.1.3.1', usuario, password, values['-DROPDOWN-C-'])
                 print(output)
-            elif values['-DROPDOWN-'] == "R4":
+            elif values['-DROPDOWN-R-'] == "R4":
                 window_configuration['-OUTPUT-'].update("")
                 print('Conectando ...')
                 output = get_configuration('10.1.3.2', usuario, password, values['-DROPDOWN-C-'])
                 print(output)
-            elif values['-DROPDOWN-'] == "R5":
+            elif values['-DROPDOWN-R-'] == "R5":
                 window_configuration['-OUTPUT-'].update("")
                 print('Conectando ...')
                 output = get_configuration('192.172.10.1', usuario, password, values['-DROPDOWN-C-'])
                 print(output)
-            elif values['-DROPDOWN-R-'] == "":
-                sg.popup('Error', 'Seleccione un router')
 
         if event == 'Regresar' or event == sg.WIN_CLOSED: # Definimos si se cierra la ventana se termina el evento o si se selecciona salir
             window_configuration.close()
@@ -179,7 +173,7 @@ def get_configuration(ip, user, password, option):
             return output
         except Exception as e:
             return str(e)
-    elif option == "DCHP":
+    elif option == "DHCP":
         try:
             output = get_dhcp(ip, user, password)
             return output
